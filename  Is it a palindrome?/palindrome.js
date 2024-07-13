@@ -6,4 +6,4 @@ function isPalindrome(x) {
             return false
     }
     return true
-} console.log(isPalindrome("a"));
+} console.log(isPalindrome("anndggdnna"));

@@ -8,4 +8,4 @@ function filter_list(l) {
             k = k + 1;
         }
     }return newArr;
-}console.log(filter_list([1,2,'a','b']))
+}console.log(filter_list([1,2,'a','Is-it-a-palindrome?']))

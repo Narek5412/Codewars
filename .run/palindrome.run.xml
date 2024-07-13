@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="palindrome" type="NodeJSConfigurationType" editBeforeRun="true" focusToolWindowBeforeRun="true" singleton="false" path-to-js-file="palindrome.js" working-dir="$PROJECT_DIR$/ Is it a palindrome?">
+    <method v="2" />
+  </configuration>
+</component>

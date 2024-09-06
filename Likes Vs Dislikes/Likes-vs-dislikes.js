@@ -23,10 +23,8 @@ If no button is currently active, return Nothing.
 */
 
 function likeOrDislike(buttons) {
-    let result = buttons[0];
-    if(buttons.length === 0 ){
-        result = "Nothing"
-    }
+    let result = "Nothing"
+
     for(let i = 1;i<buttons.length;i++){
         if(result === buttons[i]){
             result = "Nothing"
@@ -38,3 +36,4 @@ function likeOrDislike(buttons) {
 }console.log(likeOrDislike(["Dislike","Like","Like","Like","Dislike","Dislike","Like","Like"]))
 console.log(likeOrDislike(["Dislike","Like","Like","Like","Dislike"]))
 console.log(likeOrDislike(["Dislike","Like","Like","Like"]))
+console.log(likeOrDislike([]))

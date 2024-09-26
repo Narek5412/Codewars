@@ -20,7 +20,7 @@ Output array
         [-3,  2,  1, -5,  1 ]
     ]
 
- */debugger
+ */
 function matrix(array) {
     for(let i = 0; i<array.length;i++){
         let res = array[i]

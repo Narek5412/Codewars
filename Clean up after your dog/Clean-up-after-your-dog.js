@@ -18,7 +18,7 @@ x (or garden) =
         [ _ , _ , _ , _ , @ , _ ],
         [ @ , _ , _ , _ , _ , _ ]]
 returns 'Clean'
-*/debugger
+*/
 function crap(x, bags, cap){
     let allCap = 0;
     for(let i = 0;i<x.length;i++){

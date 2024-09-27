@@ -30,9 +30,9 @@ function every(arr, interval, start){
             i += interval;
         }
     }else {
-        for (let i = 0; i < arr.length; i++) {
-            newArr.push(arr[i]);
-        }
+
+            newArr=arr;
+
     }return newArr
 }console.log(every([0,1,2,3,4]));
  console.log(every(["rock",{"50":"L"},{"100":"C"},1,null,"b",null,"c",0,"a",3,2,4,null,"scissors",{"10":"X"}],2,6))

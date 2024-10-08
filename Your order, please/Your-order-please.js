@@ -20,6 +20,4 @@ function order(words){
             }
         }
     return newArr.join(" ")
-
-
 }console.log(order("4of Fo1r pe6ople g3ood th5e the2"));

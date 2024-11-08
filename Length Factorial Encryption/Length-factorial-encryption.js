@@ -46,7 +46,7 @@ let count = ""
     str = str.split("-")
     console.log(str)
    for(let i = 0; i < count; i++){
-       password += message[(+str[i])-1]
+       password += message[(+str[i])-1];
    }return password
 }console.log(decrypt("snes@%jhrjsrawedoc", "p10[18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1]"));
 console.log(decrypt("psrteeto c", "p0[7-8-1-9-2-5-10-3-6-4]"))

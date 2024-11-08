@@ -44,7 +44,6 @@ let count = ""
         }
     }count = message.length - +count
     str = str.split("-")
-    console.log(str)
    for(let i = 0; i < count; i++){
        password += message[(+str[i])-1];
    }return password

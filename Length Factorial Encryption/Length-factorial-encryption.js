@@ -32,21 +32,25 @@ Your function should return the original message.
 length of original message, n: 0 <= n <= 100
 length of rubbish added to message, p: 0 <= p <= 200
  */
-function decrypt(message, key){
-let password = "";
-let str = "";
-let count = ""
-    for(let i = 0; i < key.length; i++){
-        if(i > key.indexOf("[") && i < key.indexOf("]")) {
+function decrypt(message, key) {
+    let password = "";
+    let str = "";
+    let count = ""
+    for (let i = 0; i < key.length; i++) {
+        if (i > key.indexOf("[") && i < key.indexOf("]")) {
             str += key[i]
-        }else if(i > key.indexOf("p") && i < key.indexOf("[")){
+        } else if (i > key.indexOf("p") && i < key.indexOf("[")) {
             count += key[i]
         }
-    }count = message.length - +count
+    }
+    count = message.length - +count
     str = str.split("-")
-   for(let i = 0; i < count; i++){
-       password += message[(+str[i])-1];
-   }return password
-}console.log(decrypt("snes@%jhrjsrawedoc", "p10[18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1]"));
+    for (let i = 0; i < count; i++) {
+        password += message[(+str[i]) - 1];
+    }
+    return password
+}
+
+console.log(decrypt("snes@%jhrjsrawedoc", "p10[18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1]"));
 console.log(decrypt("psrteeto c", "p0[7-8-1-9-2-5-10-3-6-4]"))
 

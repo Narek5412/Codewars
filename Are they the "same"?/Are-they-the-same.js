@@ -25,24 +25,27 @@ a or b might be nil or null or None or nothing (except in C++, COBOL, Crystal, D
 Fortran, F#, Haskell, Nim, OCaml, Pascal, Perl, PowerShell, Prolog, PureScript, R, Racket, Rust, Shell, Swift).
 If a or b are nil (or null or None, depending on the language), the problem doesn't make sense so return false.
  */
-function comp(array1, array2){
-    if(array1===[]|| array2 === []||array1===null|| array2===null){
+function comp(array1, array2) {
+    if (array1 === [] || array2 === [] || array1 === null || array2 === null) {
         return false
     }
-let arr = [...array1]
-    for(let i=0; i < array1.length; i++){
-        for(let j=0; j < arr.length; j++){
-            if(arr[j]=== array2[i]**(1/2)){//arr[2,2,3]    array2[4,9,9]
-                arr.splice(arr.indexOf(arr[j],0),1)
+    let arr = [...array1]
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] === array2[i] ** (1 / 2)) {//arr[2,2,3]    array2[4,9,9]
+                arr.splice(arr.indexOf(arr[j], 0), 1)
                 break
             }
         }
-    }if(arr.length === 0){
+    }
+    if (arr.length === 0) {
         return true
-    }else{
+    } else {
         return false
     }
-}console.log(comp([121, 144, 19, 161, 19, 144, 19, 11],[121, 14641, 20736, 361, 25921, 361, 20736, 361]))
-console.log(comp([121, 144, 19, 161, 19, 144, 19, 11],[122, 14641, 20736, 361, 25921, 361, 20736, 361]))
-console.log(comp([121, 144, 19, 161, 19, 144, 19, 11] , [121, 14641, 20736, 36100, 25921, 361, 20736, 361]))
-console.log(comp([2, 2, 3] ,[4, 9, 9]))
+}
+
+console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [121, 14641, 20736, 361, 25921, 361, 20736, 361]))
+console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [122, 14641, 20736, 361, 25921, 361, 20736, 361]))
+console.log(comp([121, 144, 19, 161, 19, 144, 19, 11], [121, 14641, 20736, 36100, 25921, 361, 20736, 361]))
+console.log(comp([2, 2, 3], [4, 9, 9]))

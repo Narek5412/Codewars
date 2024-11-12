@@ -10,7 +10,9 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 2 --> 3 + 5 = 8
  */
 function rowSumOddNumbers(n) {
-return Math.pow(n,3)
-}console.log(rowSumOddNumbers(2));
+    return Math.pow(n, 3)
+}
+
+console.log(rowSumOddNumbers(2));
 console.log(rowSumOddNumbers(3));
 console.log(rowSumOddNumbers(4));

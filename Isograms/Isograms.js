@@ -6,17 +6,20 @@ Example: (Input --> Output)
 "aba" --> false
 "moOse" --> false (ignore letter case)
  */
-function isIsogram(str){
+function isIsogram(str) {
     str = str.toLowerCase()
     let result = true
-    for(let i = 0;i<str.length;i++){
-        for(let j = i+1;j<str.length;j++){
-            if(str[i] === str[j]){
-              return false
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j < str.length; j++) {
+            if (str[i] === str[j]) {
+                return false
             }
         }
 
-    } return result
-}console.log(isIsogram("Dermatoglyphics"))
+    }
+    return result
+}
+
+console.log(isIsogram("Dermatoglyphics"))
 console.log(isIsogram("aba"))
 

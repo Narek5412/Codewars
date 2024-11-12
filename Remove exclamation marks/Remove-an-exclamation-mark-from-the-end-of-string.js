@@ -8,6 +8,9 @@ Examples
 "!Hi!"    ---> "!Hi"
 "Hi! Hi!" ---> "Hi!"
 Hi" "Hi"      ---> "Hi"
-*/ function remove(string) {
+*/
+function remove(string) {
     return string.endsWith('!') ? string.slice(0, -1) : s;
-}console.log(remove("Hi Mari!"));
+}
+
+console.log(remove("Hi Mari!"));

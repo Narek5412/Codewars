@@ -19,28 +19,32 @@ A size 5 diamond:
     *
 ...that is:"  *\n ***\n*****\n ***\n  *\n"
  */
-function diamond(n){
+function diamond(n) {
     let result = ""
-    if(n % 2 === 0 || n < 0){
+    if (n % 2 === 0 || n < 0) {
         return null
     }
-    for(let i = 0; i < n/2; i++){
-let line = ""
-        for(let j = 0; j < n; j++){
-        if(i === 0){
-            line += "*"
-        }else if(j >= i && j <= n-i-1 ){
-            line += "*"
-        }else{
-            line += " "
+    for (let i = 0; i < n / 2; i++) {
+        let line = ""
+        for (let j = 0; j < n; j++) {
+            if (i === 0) {
+                line += "*"
+            } else if (j >= i && j <= n - i - 1) {
+                line += "*"
+            } else {
+                line += " "
+            }
         }
-        }if(i!== Math.floor(n / 2)){
-        result += (line.trimEnd()+ "\n")
-        }else {
+        if (i !== Math.floor(n / 2)) {
+            result += (line.trimEnd() + "\n")
+        } else {
             result += line.trimEnd()
         }
-    } let arr = result.split("\n");
-    return ((arr.slice(1, arr.length)).reverse().concat(arr).join("\n")+"\n")
+    }
+    let arr = result.split("\n");
+    return ((arr.slice(1, arr.length)).reverse().concat(arr).join("\n") + "\n")
 
 
-}console.log(diamond(11));
+}
+
+console.log(diamond(11));

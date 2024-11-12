@@ -14,14 +14,17 @@ Examples
 function groupByCommas(n) {
     let str = n.toString()
     let newStr = '';
-    for (let i = 1; i < str.length+1; i++) {
-          if(i % 3 === 0 && i !== str.length){
-              newStr = "," + str[str.length -i] + newStr
-          }else {
-              newStr = str[str.length -i] + newStr
-          }
+    for (let i = 1; i < str.length + 1; i++) {
+        if (i % 3 === 0 && i !== str.length) {
+            newStr = "," + str[str.length - i] + newStr
+        } else {
+            newStr = str[str.length - i] + newStr
+        }
 
-    }return newStr
-}console.log(groupByCommas(35235235))
-console.log(groupByCommas(1000000 ))
-console.log(groupByCommas(100000 ))
+    }
+    return newStr
+}
+
+console.log(groupByCommas(35235235))
+console.log(groupByCommas(1000000))
+console.log(groupByCommas(100000))

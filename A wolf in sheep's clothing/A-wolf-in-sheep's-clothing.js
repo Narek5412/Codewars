@@ -20,9 +20,11 @@ Output: "Pls go away and stop eating my sheep"
 */
 function warnTheSheep(queue) {
     let i = queue.length - 1 - (queue.indexOf("wolf"));
-    if(i === 0){
+    if (i === 0) {
         return "Pls go away and stop eating my sheep"
-    }else{
+    } else {
         return "Oi! Sheep number " + i + "! You are about to be eaten by a wolf!"
     }
-}console.log(warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"]));
+}
+
+console.log(warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"]));

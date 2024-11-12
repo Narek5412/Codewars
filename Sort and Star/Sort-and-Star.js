@@ -6,4 +6,4 @@ You should not remove or add elements from/to the array.
 function twoSort(s) {
     let sortWord = s.sort()[0].split("").join('***');
     return sortWord;
-}; console.log(twoSort(["turns", "out", "random", "test", "cases", "easier", "than", "writing", "out", "basic"]));
+};console.log(twoSort(["turns", "out", "random", "test", "cases", "easier", "than", "writing", "out", "basic"]));

@@ -14,14 +14,17 @@ Examples:
 - h = 3, bounce = 1, window = 1.5, result is -1
  */
 
-function bouncingBall(h,  bounce,  window) {
+function bouncingBall(h, bounce, window) {
     let count = 0
-if(bounce >= 1 || bounce <= 0|| h <= 0 || window > h) {
-    return -1
+    if (bounce >= 1 || bounce <= 0 || h <= 0 || window > h) {
+        return -1
+    }
+    while (h > window) {
+        count += 2
+        h *= bounce
+    }
+    return count - 1
 }
-while(h > window){
-    count += 2
-    h *= bounce
-}return count-1
-}console.log(bouncingBall(3.0, 0.66, 1.5))
+
+console.log(bouncingBall(3.0, 0.66, 1.5))
 console.log(bouncingBall(3.0, 1, 1.5))

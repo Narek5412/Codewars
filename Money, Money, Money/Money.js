@@ -27,9 +27,12 @@ to Principal 'P' this should return 0 Years.
 
 function calculateYears(principal, interest, tax, desired) {
     let year = 0;
-    while(principal <= desired){
-        principal=principal+((principal*interest)-(principal*interest*tax))
-        year ++;
-    }return year
-}console.log(calculateYears(1000,0.05,0.18,1100))
+    while (principal <= desired) {
+        principal = principal + ((principal * interest) - (principal * interest * tax))
+        year++;
+    }
+    return year
+}
+
+console.log(calculateYears(1000, 0.05, 0.18, 1100))
 

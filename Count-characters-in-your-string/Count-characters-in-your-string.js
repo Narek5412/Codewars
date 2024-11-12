@@ -4,9 +4,12 @@ What if the string is empty? Then the result should be empty object literal, {}.
  */
 function count(string) {
     let obj = {}
-        for (let i = 0; i < string.length; i++) {
-            const char = string[i];
-            obj[char] = (obj[char] || 0) + 1;
-    }return obj;
-}console.log(count("ababbcd"));
+    for (let i = 0; i < string.length; i++) {
+        const char = string[i];
+        obj[char] = (obj[char] || 0) + 1;
+    }
+    return obj;
+}
+
+console.log(count("ababbcd"));
 

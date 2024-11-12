@@ -5,5 +5,7 @@ Good luck :)
 */
 function unusualFive() {
     return "abcde".length
-}console.log(unusualFive())
+}
+
+console.log(unusualFive())
 

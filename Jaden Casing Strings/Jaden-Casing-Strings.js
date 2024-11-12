@@ -13,8 +13,8 @@ Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
  */
 function JadenCase(str) {
     let words = str.split(" ");
-    let saveWord = words.map(function(word) {
+    let saveWord = words.map(function (word) {
         return word.charAt(0).toUpperCase() + word.slice(1);
     });
     return saveWord.join(" ")
-}; console.log(JadenCase("How Can Mirrors Be Real If Our Eyes Aren't Real" ));
+};console.log(JadenCase("How Can Mirrors Be Real If Our Eyes Aren't Real"));

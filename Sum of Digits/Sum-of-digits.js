@@ -10,11 +10,15 @@ Examples
  */
 function digitalRoot(n) {
     let num = 0
-    while(n > 0){
-        num += n%10
-        n = Math.floor(n/10)
-    }if(num >= 10 ){
+    while (n > 0) {
+        num += n % 10
+        n = Math.floor(n / 10)
+    }
+    if (num >= 10) {
         n = num
         return digitalRoot(n)
-    }return num
-}console.log(digitalRoot(555));
+    }
+    return num
+}
+
+console.log(digitalRoot(555));

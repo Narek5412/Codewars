@@ -16,14 +16,16 @@ function alphabetPosition(text) {
 
     for (let i = 0; i < text.length; i++) {
         for (let key in obj) {
-            if(str.length === 0 && obj.hasOwnProperty(text[i])){
-                str +=obj[text[i] ] ;
+            if (str.length === 0 && obj.hasOwnProperty(text[i])) {
+                str += obj[text[i]];
                 break
-            }
-            else if (obj.hasOwnProperty(text[i])) {
-                str +=" " + obj[text[i] ] ;
+            } else if (obj.hasOwnProperty(text[i])) {
+                str += " " + obj[text[i]];
                 break
             }
         }
-    }return str
-}console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+    }
+    return str
+}
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."))

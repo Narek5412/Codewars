@@ -19,9 +19,12 @@
 30 --> "drink whisky"
 */
 debugger;
+
 function peopleWithAgeDrink(old) {
-    let result = old < 14 ? "drink toddy":
-                  14 <= old && old < 18 ? "drink coke":
-                  18 <= old && old < 21 ? "drink beer":"drink whisky";
+    let result = old < 14 ? "drink toddy" :
+        14 <= old && old < 18 ? "drink coke" :
+            18 <= old && old < 21 ? "drink beer" : "drink whisky";
     return result
-} console.log(peopleWithAgeDrink(14));
+}
+
+console.log(peopleWithAgeDrink(14));

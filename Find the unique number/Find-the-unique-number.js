@@ -6,10 +6,12 @@ The tests contain some very huge arrays, so think about performance.
  */
 function findUniq(arr) {
     for (let i = 0; i < arr.length; i++) {
-        if(arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])){
+        if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
             return arr[i];
         }
     }
-}console.log(findUniq([ 3, 10, 3, 3, 3 ]));
-console.log(findUniq([ 0, 0, 0.55, 0, 0 ]));
-console.log(findUniq([ 0,0,1 ]));
+}
+
+console.log(findUniq([3, 10, 3, 3, 3]));
+console.log(findUniq([0, 0, 0.55, 0, 0]));
+console.log(findUniq([0, 0, 1]));

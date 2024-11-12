@@ -26,4 +26,6 @@ function switchItUp(number) {
         case 9:
             return 'Nine';
     }
-}console.log(switchItUp(9));
+}
+
+console.log(switchItUp(9));

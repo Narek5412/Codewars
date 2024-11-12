@@ -6,7 +6,9 @@ create and return an array with the following pattern:
      squareUp(2) => [0, 1, 2, 1]
      squareUp(4) => [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
 0 <= n <= 1 000
- */debugger
+ */
+debugger
+
 function squareUp(n) {
     const result = [];
 
@@ -20,4 +22,5 @@ function squareUp(n) {
     }
     return result;
 }
+
 console.log(squareUp(4));

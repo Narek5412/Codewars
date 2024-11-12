@@ -16,17 +16,20 @@ For example:
  */
 function checkExam(array1, array2) {
     let result = 0
-    for (let i = 0; i<array1.length;i++){
-        if(array1[i] === array2[i]){
+    for (let i = 0; i < array1.length; i++) {
+        if (array1[i] === array2[i]) {
             result += 4
-        }else if(array2[i] === ""){
+        } else if (array2[i] === "") {
             continue
-        }else{
+        } else {
             result -= 1
         }
-    }if(result < 0){
+    }
+    if (result < 0) {
         return 0
     }
     return result
-}console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]))
-console.log(checkExam(["a","b","a","b","a","c","b","a","c","a","b","b"],  ["a","b","b","b","b","c","c","a","a","b","","a"]))
+}
+
+console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]))
+console.log(checkExam(["a", "b", "a", "b", "a", "c", "b", "a", "c", "a", "b", "b"], ["a", "b", "b", "b", "b", "c", "c", "a", "a", "b", "", "a"]))

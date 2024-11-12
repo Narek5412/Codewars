@@ -7,11 +7,15 @@ which is the number of times you must multiply the digits in num until you reach
  */
 function persistence(num) {
     let str = num + ""
-for (var i = 0; num> 9; i++) {
-    num = 1
-      for(let j = 0; j < str.length; j++) {
-        num *= +str[j]
-      }str = num+""
-}return i
-}console.log(persistence(999))
+    for (var i = 0; num > 9; i++) {
+        num = 1
+        for (let j = 0; j < str.length; j++) {
+            num *= +str[j]
+        }
+        str = num + ""
+    }
+    return i
+}
+
+console.log(persistence(999))
 console.log(persistence(39))

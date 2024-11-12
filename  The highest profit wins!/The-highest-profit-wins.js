@@ -18,5 +18,5 @@ to check the length. Also, your function will always get an array or a list,
 you don't have to check for null, undefined or similar.
 */
 function minMax(arr) {
-    return [Math.min.apply(null, arr),Math.max.apply(null, arr)];
-}; console.log(minMax([1,2,3,4,5,6,7,8,9]));
+    return [Math.min.apply(null, arr), Math.max.apply(null, arr)];
+};console.log(minMax([1, 2, 3, 4, 5, 6, 7, 8, 9]));

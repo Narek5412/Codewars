@@ -11,17 +11,20 @@ Example: (input --> output)
 "GTAT" --> "CATA"
 */
 
-function dnaStrand(dna){
+function dnaStrand(dna) {
     let newDna = ""
-    for(let i = 0; i < dna.length ; i++){
-        if(dna[i] === "A"){
+    for (let i = 0; i < dna.length; i++) {
+        if (dna[i] === "A") {
             newDna = newDna + "T"
-        }else if(dna[i] === "T"){
+        } else if (dna[i] === "T") {
             newDna = newDna + "A"
-        }else if(dna[i] === "C"){
+        } else if (dna[i] === "C") {
             newDna = newDna + "G"
-        }else{
+        } else {
             newDna = newDna + "C"
         }
-    } return newDna
-} console.log(dnaStrand("AAAA"))
+    }
+    return newDna
+}
+
+console.log(dnaStrand("AAAA"))

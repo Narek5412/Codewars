@@ -11,14 +11,19 @@ by the string is divisible by three.
 "100853"   -> false
 "33333333" -> true
 "7"        -> false
-*/debugger
-function divisibleByThree(str){
+*/
+debugger
+
+function divisibleByThree(str) {
     let sum = 0;
-    for(let i = 0; i<str.length;i++){
+    for (let i = 0; i < str.length; i++) {
         sum += +str[i]
-    }if(sum%3===0){
+    }
+    if (sum % 3 === 0) {
         return true
-    }else{
+    } else {
         return false
     }
-}console.log(divisibleByThree("1234"));
+}
+
+console.log(divisibleByThree("1234"));

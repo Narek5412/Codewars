@@ -22,12 +22,15 @@ Example
 wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 Good luck and enjoy!
  */
-function wave(str){
+function wave(str) {
     let arr = [];
-    for(let i = 0; i < str.length; i++){
-        if(str[i] !== " ") {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== " ") {
             arr.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1, str.length))
         }
-    }return arr
-}console.log(wave("hello"))
+    }
+    return arr
+}
+
+console.log(wave("hello"))
 console.log(wave("hello world"))

@@ -20,17 +20,21 @@ n = 695; p = 2 ---> 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2
 
 n = 46288; p = 3 ---> 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
  */
-function digPow(n, p){
+function digPow(n, p) {
     let k = 0;
     let sum = 0;
     let num = n + "";
-    for(let i = 0;i<num.length;i++){
-        let number = + num[i]
-        sum += number**p;
+    for (let i = 0; i < num.length; i++) {
+        let number = +num[i]
+        sum += number ** p;
         p += 1;
-    }if(sum%n === 0){
-        k = sum/n;
-    }else{
+    }
+    if (sum % n === 0) {
+        k = sum / n;
+    } else {
         k = -1;
-    }return k;
-} console.log(digPow(1878, 2));
+    }
+    return k;
+}
+
+console.log(digPow(1878, 2));

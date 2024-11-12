@@ -12,16 +12,19 @@ and numeric digits.
 "aA11" -> 2 # 'a' and '1'
 "ABBA" -> 2 # 'A' and 'B' each occur twice
  */
-function duplicateCount(text){
+function duplicateCount(text) {
     let str = text.toLowerCase()
     let result = 0
     let obj = {}
     for (let i = 0; i < str.length; i++) {
         var char = str[i];
         obj[char] = (obj[char] || 0) + 1;
-        if(obj[char] > 1 && obj[char] <= 2){
+        if (obj[char] > 1 && obj[char] <= 2) {
             result++
         }
-    }return result;
-}console.log(duplicateCount("aaabbbBcde"));
+    }
+    return result;
+}
+
+console.log(duplicateCount("aaabbbBcde"));
 console.log(duplicateCount("Indivisibilities"));

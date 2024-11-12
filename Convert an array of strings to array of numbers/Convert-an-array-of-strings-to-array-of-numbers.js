@@ -11,9 +11,12 @@
 
 Note that you can receive floats as well.
  */
-function toNumberArray(stringArray){
+function toNumberArray(stringArray) {
     let newArr = []
-    for(let i = 0; i <stringArray.length;i++){
+    for (let i = 0; i < stringArray.length; i++) {
         newArr[i] = +stringArray[i]
-    }return newArr
-}console.log(toNumberArray(["1.1","2.2","3.3"]))
+    }
+    return newArr
+}
+
+console.log(toNumberArray(["1.1", "2.2", "3.3"]))

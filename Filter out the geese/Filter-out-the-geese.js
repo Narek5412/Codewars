@@ -10,17 +10,18 @@ The elements in the returned array should be in the same order as in the initial
 passed to your function, albeit with the 'geese' removed. Note that all of the strings
 will be in the same case as those provided, and some elements may be repeated.
  */
-function gooseFilter (birds) {
+function gooseFilter(birds) {
     const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim"];
-    return birds.filter(function(bird){
-        for(let i = 0; i < geese.length; i++){
-            if(bird === geese[i]){
+    return birds.filter(function (bird) {
+        for (let i = 0; i < geese.length; i++) {
+            if (bird === geese[i]) {
                 return false;
             }
-        };
+        }
+        ;
         return true;
     });
-}; console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+};console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
 
 
 

@@ -5,13 +5,16 @@ Else, return false.
 You can assume all values in the array are numbers.
 */
 debugger;
-function smallEnough(a, limit){
-  let a1 = a.filter(function(val){
+
+function smallEnough(a, limit) {
+    let a1 = a.filter(function (val) {
         return val <= limit;
     });
-    if(a1.length === a.length){
+    if (a1.length === a.length) {
         return true
-    }else{
+    } else {
         return false
     }
-}console.log(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120))
+}
+
+console.log(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120))

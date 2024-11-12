@@ -5,18 +5,20 @@ let num = numbers[0]
 let i = 1;
 let j = 0;
 
-while ( i < numbers.length){
+while (i < numbers.length) {
     if (numbers[i] < num) {
         num = numbers[i];
         indexOfSmallestNumber = i;
 
-    } i++;
+    }
+    i++;
 }
 i = 0;
-while(i < numbers.length){
-    if(i !== indexOfSmallestNumber){
+while (i < numbers.length) {
+    if (i !== indexOfSmallestNumber) {
         arr[j] = numbers[i];
         j++;
-    } i++;
+    }
+    i++;
 }
 console.log(arr);

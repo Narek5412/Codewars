@@ -13,30 +13,32 @@ Invalid arrays
     [1, -9] is invalid because -9 is not a non-negative integer
     [1, 2, 33] is invalid because 33 is not a single-digit integer
  */
-function upArray(arr){
-   if(arr.length < 1){
-       return null
-   }
-    for(let i = arr.length - 1; i  >= 0 ; i--){
-        if(arr[i] < 0 || arr[i] > 9 ){
+function upArray(arr) {
+    if (arr.length < 1) {
+        return null
+    }
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] < 0 || arr[i] > 9) {
             return null
-        }else if (arr[arr.length -1]=== 9){
-            arr[arr.length -1] += 1
-            for(let j = i; j  >= 0; j--){
-                if(arr[j]===10 && j === 0){
+        } else if (arr[arr.length - 1] === 9) {
+            arr[arr.length - 1] += 1
+            for (let j = i; j >= 0; j--) {
+                if (arr[j] === 10 && j === 0) {
                     arr.unshift(1)
-                    arr[j+1]= 0
-                }else if(arr[j]===10 ){
-                    arr[j - 1]  += 1
+                    arr[j + 1] = 0
+                } else if (arr[j] === 10) {
+                    arr[j - 1] += 1
                     arr[j] = 0
                 }
             }
-        }else if(i === arr.length - 1 ){
+        } else if (i === arr.length - 1) {
             arr[i] += 1
         }
     }
     return arr
-}console.log(upArray([-8,8]));
-console.log(upArray([0,7,5,8,2,2,9,6,3,8,2,3,3,1,0,6,5,8,0,0,8,9,7,5,9,6,5,9,7,3,1,6,5,9]));
+}
+
+console.log(upArray([-8, 8]));
+console.log(upArray([0, 7, 5, 8, 2, 2, 9, 6, 3, 8, 2, 3, 3, 1, 0, 6, 5, 8, 0, 0, 8, 9, 7, 5, 9, 6, 5, 9, 7, 3, 1, 6, 5, 9]));
 
 

@@ -8,17 +8,17 @@ For example, repeats([4,5,7,5,4,8]) = 15 because only the numbers
     If you like this Kata, please try:
  */
 
-function repeats(arr){
-    for(let i = 0;i<arr.length;i++){
-        for(let j = i+1;j<arr.length+1;j++){
-            if(arr[i]===arr[j]){
-                arr.splice(i,1);
-                arr.splice(j-1,1);
+function repeats(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length + 1; j++) {
+            if (arr[i] === arr[j]) {
+                arr.splice(i, 1);
+                arr.splice(j - 1, 1);
                 i -= 1
-               break;
+                break;
             }
         }
     }
-    return arr.reduce((sum,val)=>sum+val,0)
+    return arr.reduce((sum, val) => sum + val, 0)
 }//console.log(repeats([9, 10, 19, 13, 19, 13]));
 console.log(repeats([16, 0, 11, 4, 8, 16, 0, 11]))

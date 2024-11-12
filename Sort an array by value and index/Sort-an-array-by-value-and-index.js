@@ -14,12 +14,13 @@ Product of value and index:
 Output: 2, 3, 4, 23, 5
  */
 debugger
+
 function sortByValueAndIndex(arr) {
     const productsArr = [];
     for (let i = 0; i < arr.length; i++) {
         const value = arr[i];
         const product = value * (i + 1);
-        productsArr.push({ product, value });
+        productsArr.push({product, value});
     }
     productsArr.sort((a, b) => a.product - b.product);
     const sortedArray = [];
@@ -27,4 +28,6 @@ function sortByValueAndIndex(arr) {
         sortedArray.push(productsArr[i].value);
     }
     return sortedArray;
-}console.log(sortByValueAndIndex([15,2,3,4,5]));
+}
+
+console.log(sortByValueAndIndex([15, 2, 3, 4, 5]));

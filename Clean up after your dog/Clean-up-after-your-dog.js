@@ -19,24 +19,27 @@ x (or garden) =
         [ @ , _ , _ , _ , _ , _ ]]
 returns 'Clean'
 */
-function crap(x, bags, cap){
+function crap(x, bags, cap) {
     let allCap = 0;
-    for(let i = 0;i<x.length;i++){
-        let  res = x[i];
-        for(let j = 0;j<res.length;j++){
-            if(res[j]==="@") {
+    for (let i = 0; i < x.length; i++) {
+        let res = x[i];
+        for (let j = 0; j < res.length; j++) {
+            if (res[j] === "@") {
                 allCap++
-            }else if(res[j]==="D"){
+            } else if (res[j] === "D") {
                 return 'Dog!!'
-            }else if(res[j]!=="D" && res[j]!=="@"){
+            } else if (res[j] !== "D" && res[j] !== "@") {
                 continue
             }
         }
-    }if(allCap > bags * cap){
+    }
+    if (allCap > bags * cap) {
         return 'Cr@p'
-    }else{
+    } else {
         return 'Clean'
     }
-}console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 2, 2))
-console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 1, 1))
-console.log(crap([['_','_'], ['_','@'], ['D','_']], 2, 2))
+}
+
+console.log(crap([['_', '_', '_', '_'], ['_', '_', '_', '@'], ['_', '_', '@', '_']], 2, 2))
+console.log(crap([['_', '_', '_', '_'], ['_', '_', '_', '@'], ['_', '_', '@', '_']], 1, 1))
+console.log(crap([['_', '_'], ['_', '@'], ['D', '_']], 2, 2))

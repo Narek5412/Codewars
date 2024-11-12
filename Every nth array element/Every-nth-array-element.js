@@ -14,25 +14,30 @@ Notes
 Test cases:
     interval will always be a positive integer (but may be larger than the size of the array).
 start_index will always be within the bounds of the array.
- */debugger
-function every(arr, interval, start){
-     let newArr =[];
-    if(interval > 0 && start >0){
+ */
+debugger
+
+function every(arr, interval, start) {
+    let newArr = [];
+    if (interval > 0 && start > 0) {
         let i = start
-        while(i<arr.length){
-           newArr.push(arr[i]);
-           i += interval;
-        }
-    }else if(interval > 0){
-        let i = 0 ;
-        while(i<arr.length){
+        while (i < arr.length) {
             newArr.push(arr[i]);
             i += interval;
         }
-    }else {
+    } else if (interval > 0) {
+        let i = 0;
+        while (i < arr.length) {
+            newArr.push(arr[i]);
+            i += interval;
+        }
+    } else {
 
-            newArr=arr;
+        newArr = arr;
 
-    }return newArr
-}console.log(every([0,1,2,3,4]));
- console.log(every(["rock",{"50":"L"},{"100":"C"},1,null,"b",null,"c",0,"a",3,2,4,null,"scissors",{"10":"X"}],2,6))
+    }
+    return newArr
+}
+
+console.log(every([0, 1, 2, 3, 4]));
+console.log(every(["rock", {"50": "L"}, {"100": "C"}, 1, null, "b", null, "c", 0, "a", 3, 2, 4, null, "scissors", {"10": "X"}], 2, 6))

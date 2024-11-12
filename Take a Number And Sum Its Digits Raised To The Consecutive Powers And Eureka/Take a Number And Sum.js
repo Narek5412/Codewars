@@ -20,19 +20,23 @@ Enjoy it!!
  */
 function sumDigPow(a, b) {
     let arr = []
-    for(let i = a;i<b;i++){
-        let str = i+""
-            if(i / 10 < 1){
-           arr.push(i);
-        }else{
-                let sum = 0
-                for(let j = 0;j<str.length ;j++){
-                  sum += (+str[j])**(j+1)
-                }if(i === sum){
-                    arr.push(i);
-                }
+    for (let i = a; i < b; i++) {
+        let str = i + ""
+        if (i / 10 < 1) {
+            arr.push(i);
+        } else {
+            let sum = 0
+            for (let j = 0; j < str.length; j++) {
+                sum += (+str[j]) ** (j + 1)
             }
-    }return arr;
-}console.log(sumDigPow(1,100))
-console.log(sumDigPow(1,136))
-console.log(sumDigPow(1,999))
+            if (i === sum) {
+                arr.push(i);
+            }
+        }
+    }
+    return arr;
+}
+
+console.log(sumDigPow(1, 100))
+console.log(sumDigPow(1, 136))
+console.log(sumDigPow(1, 999))

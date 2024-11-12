@@ -24,27 +24,29 @@ P.S. The situation in this kata can be likened to the more-computer-science-rela
 with relation to running multiple processes at the same time:
  */
 function queueTime(customers, n) {
-    if(n === 1 ){
+    if (n === 1) {
         return customers.reduce((a, b) => a + b, 0)
     }
     let time = [];
     for (let i = 0; i < customers.length; i++) {
-        if(i<n) {
+        if (i < n) {
             time[i] = customers[i];
-        }
-        else{
+        } else {
             for (let j = 0; j < n; j++) {
-                if(Math.min.apply(null, time)===Math.max.apply(null, time)){
-                    time[0]+=customers[i]
+                if (Math.min.apply(null, time) === Math.max.apply(null, time)) {
+                    time[0] += customers[i]
                     break
-                }else {
-                 time[time.indexOf( Math.min.apply(null, time))] += customers[i]
+                } else {
+                    time[time.indexOf(Math.min.apply(null, time))] += customers[i]
                     break
                 }
             }
         }
-    }return Math.max.apply(null, time)
-}console.log(queueTime([5,4,3],1))
-console.log(queueTime([2,10,3],2))
-console.log(queueTime([2,2,3,3,4,4], 2))
-console.log(queueTime([2,3,42,2,2],5))
+    }
+    return Math.max.apply(null, time)
+}
+
+console.log(queueTime([5, 4, 3], 1))
+console.log(queueTime([2, 10, 3], 2))
+console.log(queueTime([2, 2, 3, 3, 4, 4], 2))
+console.log(queueTime([2, 3, 42, 2, 2], 5))

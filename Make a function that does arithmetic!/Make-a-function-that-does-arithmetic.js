@@ -10,7 +10,9 @@ A few examples:(Input1, Input2, Input3 --> Output)
 5, 2, "divide"   --> 2.5
 Try to do it without using if statements!
 */
-function arithmetic(a, b, operator){
-    let result = operator ==="add"? a+b:operator ==="subtract"? a-b:operator ==="multiply"? a * b:a/b;
+function arithmetic(a, b, operator) {
+    let result = operator === "add" ? a + b : operator === "subtract" ? a - b : operator === "multiply" ? a * b : a / b;
     return result
-} console.log(arithmetic(2,7,"multiply"));
+}
+
+console.log(arithmetic(2, 7, "multiply"));

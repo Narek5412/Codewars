@@ -18,9 +18,10 @@ Examples
 26  =>  false
 */
 
-var isSquare = function(n){
+var isSquare = function (n) {
 
-    if((( n**(1/2) ) % 1 === 0) && n >= 0 )   {
+    if (((n ** (1 / 2)) % 1 === 0) && n >= 0) {
         return true
     }
-}; console.log (isSquare(25));
+};
+console.log(isSquare(25));

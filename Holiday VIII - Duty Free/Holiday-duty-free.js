@@ -13,6 +13,8 @@ you would have to purchase 166.66 bottles to save £1000,
 so your answer should be 166 bottles.
 All inputs will be integers. Please return an integer. Round down.
 */
-function dutyFree(normPrice, discount, hol){
-    return(Math.floor(hol / normPrice / discount * 100))
-} console.log(dutyFree(12, 50, 1000))
+function dutyFree(normPrice, discount, hol) {
+    return (Math.floor(hol / normPrice / discount * 100))
+}
+
+console.log(dutyFree(12, 50, 1000))

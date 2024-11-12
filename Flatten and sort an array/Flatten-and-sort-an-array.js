@@ -8,7 +8,9 @@ Addendum:
 Please, keep in mind, that JavaScript is by default sorting objects alphabetically
 */
 function flattenAndSort(array) {
-    return array.flat().sort(function(a,b){
-        return a-b
+    return array.flat().sort(function (a, b) {
+        return a - b
     })
-}console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]))
+}
+
+console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]))

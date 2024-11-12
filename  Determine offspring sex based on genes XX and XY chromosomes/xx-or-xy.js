@@ -14,6 +14,8 @@ If the sperm contains the Y chromosome, return
 */
 
 function chromosomeCheck(sperm) {
-    return sperm === 'XY'?"Congratulations! You're going to have a son.":
+    return sperm === 'XY' ? "Congratulations! You're going to have a son." :
         "Congratulations! You're going to have a daughter."
-}console.log(chromosomeCheck("XY"))
+}
+
+console.log(chromosomeCheck("XY"))

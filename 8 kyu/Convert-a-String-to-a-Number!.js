@@ -1,4 +1,5 @@
-const stringToNumber = function(str){
+const stringToNumber = function (str) {
     // put your code here
     return +str;
-};console.log(stringToNumber("54"));
+};
+console.log(stringToNumber("54"));

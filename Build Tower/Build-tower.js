@@ -19,16 +19,20 @@ And a tower with 6 floors looks like this:
  */
 function towerBuilder(nFloors) {
     let arr = [];
-    for(let i = 1; i <= nFloors; i++) {
+    for (let i = 1; i <= nFloors; i++) {
         let line = "";
-        for(let j = 0; j < nFloors * 2-1; j++) {
-             if(j < nFloors - i){
+        for (let j = 0; j < nFloors * 2 - 1; j++) {
+            if (j < nFloors - i) {
                 line += " "
-            }else if(j < (nFloors + i - 1)) {
+            } else if (j < (nFloors + i - 1)) {
                 line += "*"
-            }else{
-                 line += " "
-             }
-        }arr.push(line);
-    }return arr
-}console.log(towerBuilder(4))
+            } else {
+                line += " "
+            }
+        }
+        arr.push(line);
+    }
+    return arr
+}
+
+console.log(towerBuilder(4))

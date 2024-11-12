@@ -22,8 +22,11 @@ printer_error(s) => "8/22"
 function printerError(s) {
     let error = 0;
     for (let i = 1; i < s.length; i++) {
-        if(s.charCodeAt(i)>=110){
+        if (s.charCodeAt(i) >= 110) {
             error++
         }
-    }return error + "/" + s.length
-}console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+    }
+    return error + "/" + s.length
+}
+
+console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));

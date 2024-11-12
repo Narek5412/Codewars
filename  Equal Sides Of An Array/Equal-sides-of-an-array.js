@@ -29,25 +29,28 @@ Note
 If you are given an array with multiple answers, return the lowest correct index.
  */
 function findEvenIndex(arr) {
-let sumOfLeft = 0;
-let sumOfRight = 0;
-for(let i = 0; i <= arr.length; i++) {
-    if(sumOfLeft  === sumOfRight && i !== 0) {
-        return i - 1
+    let sumOfLeft = 0;
+    let sumOfRight = 0;
+    for (let i = 0; i <= arr.length; i++) {
+        if (sumOfLeft === sumOfRight && i !== 0) {
+            return i - 1
+        }
+        sumOfLeft = 0;
+        sumOfRight = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (j < i) {
+                sumOfLeft += arr[j];
+            } else if (j > i) {
+                sumOfRight += arr[j];
+            }
+        }
     }
-    sumOfLeft = 0;
-    sumOfRight = 0;
-   for(let j = 0; j < arr.length; j++) {
-       if(j < i){
-       sumOfLeft += arr[j];
-       }else if(j>i ){
-           sumOfRight += arr[j];
-       }
-   }
-}return -1
-}console.log(findEvenIndex([1,2,3,4,3,2,1]));
-console.log(findEvenIndex([1,100,50,-51,1,1]));
-console.log(findEvenIndex([1,2,3,4,5,6]));
-console.log(findEvenIndex([20,10,30,10,10,15,35]));
-console.log(findEvenIndex([20,10,-80,10,10,15,35]));
-console.log(findEvenIndex([10,-80,10,10,15,35,20]));
+    return -1
+}
+
+console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1]));
+console.log(findEvenIndex([1, 100, 50, -51, 1, 1]));
+console.log(findEvenIndex([1, 2, 3, 4, 5, 6]));
+console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35]));
+console.log(findEvenIndex([20, 10, -80, 10, 10, 15, 35]));
+console.log(findEvenIndex([10, -80, 10, 10, 15, 35, 20]));

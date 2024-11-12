@@ -29,26 +29,30 @@ Given m = 10, n = 9, your function should return
     [1, 2, 3, 3, 3, 3, 3, 3, 2, 1],
     [1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
-*/debugger
+*/
+debugger
+
 function createBox(m, n) {
     let arr = [];
-    for(let i = 0;i < n;i++) {
+    for (let i = 0; i < n; i++) {
         arr[i] = [];
         for (let j = 0; j < m; j++) {
             arr[i][j] = 0;
         }
     }
-    let res= m < n ? m / 2 : n / 2;
-    for(let num = 0;num<res;num ++){
+    let res = m < n ? m / 2 : n / 2;
+    for (let num = 0; num < res; num++) {
         let val = num + 1;
-        for(let col=num;col<m-num;col++){
+        for (let col = num; col < m - num; col++) {
             arr[num][col] = val;
-            arr[n-num-1][col] = val;
+            arr[n - num - 1][col] = val;
         }
-        for(let row=num;row<n - num;row++){
-            arr[row][num]=val;
-            arr[row][m-num-1]=val;
+        for (let row = num; row < n - num; row++) {
+            arr[row][num] = val;
+            arr[row][m - num - 1] = val;
         }
     }
-     return arr ;
-}console.log(createBox(6,7));
+    return arr;
+}
+
+console.log(createBox(6, 7));

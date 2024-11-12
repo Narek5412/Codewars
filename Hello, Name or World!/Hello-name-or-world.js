@@ -8,11 +8,15 @@ Examples:
 * With `name` = "aliCE" => return "Hello, Alice!"
 * With `name` not given
 or `name` = ""        => return "Hello, World!"
-*/debugger
+*/
+debugger
+
 function hello(name) {
-    if (name.length < 1){
+    if (name.length < 1) {
         return "Hello, World!"
     }
-    let newName=(name.toLowerCase())
+    let newName = (name.toLowerCase())
     return "Hello, " + (newName[0].toUpperCase() + newName.substring(1)) + "!"
-}console.log(hello("jeSICA"))
+}
+
+console.log(hello("jeSICA"))

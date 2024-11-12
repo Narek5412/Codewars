@@ -12,16 +12,19 @@ Add the average of each array together:
 Round the final average down:
     floor(44.2) = 44
  */
-function sumAverage  (arr)  {
+function sumAverage(arr) {
     let result = 0;
     let i = 0;
-    let res =0;
+    let res = 0;
     let result1 = 0;
-    while(i < arr.length) {
+    while (i < arr.length) {
         let result1 = arr[i].reduce((sum, item) => (sum + item), 0)
         res = result1 / arr[i].length;
         result += res
         i++
-    }return Math.floor(result)
-}console.log(sumAverage([[3, 4, 1, 3, 5, 1, 4], [21, 54, 33, 21, 77]]));
+    }
+    return Math.floor(result)
+}
+
+console.log(sumAverage([[3, 4, 1, 3, 5, 1, 4], [21, 54, 33, 21, 77]]));
 console.log(sumAverage([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]]));

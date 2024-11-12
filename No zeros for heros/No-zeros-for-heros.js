@@ -11,6 +11,7 @@
 Zero alone is fine, don't worry about it. Poor guy anyway
 
  */
+
 /*
 function noBoringZeros(n) {
    arr = ('' + n).split('')
@@ -25,11 +26,12 @@ function noBoringZeros(n) {
 */
 
 
-
-
-
 function noBoringZeros(n) {
-    while(n%10==0 && n!=0){n/=10;}
+    while (n % 10 == 0 && n != 0) {
+        n /= 10;
+    }
     return n;
-} console.log(noBoringZeros(145000));
+}
+
+console.log(noBoringZeros(145000));
 

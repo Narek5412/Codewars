@@ -20,11 +20,12 @@
 
 function countDevelopers(list) {
     let count = 0;
-for(let elem of list) {
-    if(elem.continent === "Europe" && elem.language === "JavaScript") {
-        count++
+    for (let elem of list) {
+        if (elem.continent === "Europe" && elem.language === "JavaScript") {
+            count++
+        }
     }
-}return count
+    return count
 }console.log(countDevelopers([
     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript' },
     { firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },

@@ -10,8 +10,7 @@
 
 function sortArray(array) {
     let oddArr = array.filter((x) => x % 2).sort((a, b) => a - b);
-    let j = 0
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0, j = 0; i < array.length; i++) {
         if (array[i] % 2 === 1 || array[i] % 2 === -1) {
             array[i] = oddArr[j]
             j++
